@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "command": "~/.copilot/hooks/scripts/safety-gate.sh",
+        "timeout": 10
+      }
+    ]
+  }
+}

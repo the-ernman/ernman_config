@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "~/.copilot/hooks/scripts/session-context.sh",
+        "timeout": 10
+      }
+    ]
+  }
+}

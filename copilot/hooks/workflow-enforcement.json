@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "SubagentStart": [
+      {
+        "type": "command",
+        "command": "~/.copilot/hooks/scripts/inject-subagent-context.sh",
+        "timeout": 10
+      }
+    ],
+    "SubagentStop": [
+      {
+        "type": "command",
+        "command": "~/.copilot/hooks/scripts/validate-subagent-output.sh",
+        "timeout": 10
+      }
+    ]
+  }
+}

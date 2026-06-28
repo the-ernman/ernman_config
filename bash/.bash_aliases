@@ -163,9 +163,6 @@ alias ruffcf='ruff check'
 alias rufff='ruff format'
 alias rufffc='ruff format --check'
 
-# Syft
-alias syftscan="syft scan --enrich all --output spdx-json"
-
 # Misc
 function _lines() {
     # Count lines in a file

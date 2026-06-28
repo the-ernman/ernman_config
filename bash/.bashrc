@@ -69,17 +69,11 @@ else
 fi
 export LESS='-R --quit-if-one-screen'
 
-# Add ~/bin and ~/.local/bin to PATH if they exist
-[[ -d "$HOME/bin" ]]        && export PATH="$HOME/bin:$PATH"
+[[ -d "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH"
 [[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
-
-# Source Aliases
 [[ -f "$HOME/.bash_aliases" ]] && source "$HOME/.bash_aliases"
-
-# Extra Aliases not distributed with this configuration (Lab/Machine specific)
 [[ -f "$HOME/.bash_extras" ]] && source "$HOME/.bash_extras"
 
-# Completions
 if ! shopt -oq posix; then
     [[ -f "/usr/share/bash-completion/bash_completion" ]] && \
         source "/usr/share/bash-completion/bash_completion"
@@ -87,4 +81,4 @@ if ! shopt -oq posix; then
         source "/etc/bash_completion"
 fi
 
-true # Ensure that exit code is 0
+true
