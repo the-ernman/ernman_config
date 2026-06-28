@@ -20,6 +20,7 @@ The installer is safe by default (dry-run) and only writes changes when you pass
 | `tmux`    | tmux config (`.tmux.conf`) |
 | `copilot` | GitHub Copilot customization (`.copilot/`) |
 | `omp`     | oh-my-pi (`omp`) config (`~/.omp/agent/`), modeled on the copilot config |
+| `ghostty` | Ghostty terminal config (`~/.config/ghostty/`) |
 
 ## Installer
 
@@ -76,6 +77,7 @@ Help:
 - Vi: restart vi (config: `~/.virc`)
 - Neovim: restart nvim (config: `~/.config/nvim/init.vim`)
 - omp: restart omp (config under `~/.omp/agent/`)
+- Ghostty: restart Ghostty, or press `cmd+shift+,` to reload (config: `~/.config/ghostty/config`)
 
 ## Idempotency
 

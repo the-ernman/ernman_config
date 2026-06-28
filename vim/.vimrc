@@ -1,27 +1,27 @@
 " General Settings
-set nocompatible    " Use Vim behavior instead of old vi compatibility mode
-set history=1000    " Remember up to 1000 command-line entries
-set encoding=utf-8  " Default text encoding
-set undolevels=1000 " Keep 1000 undo changes in memory per buffer
+set nocompatible
+set history=1000
+set encoding=utf-8
+set undolevels=1000
 
 " UI
-set ruler                      " Show current cursor position
-set number                     " Show absolute line number on current line
-set nolist                     " Do not render whitespace marker characters
-set mouse=a                    " Enable mouse in all modes
-set wildmenu                   " Enhanced completion UI in command-line mode
-set showmatch                  " Briefly jump to matching bracket/paren
-set cursorline                 " Highlight the current line
-set splitbelow                 " Horizontal splits open below current window
-set splitright                 " Vertical splits open to the right
-set listchars=                 " Clear any inherited whitespace marker config
-set scrolloff=5                " Keep 5 lines visible above/below cursor
-set laststatus=2               " Always display a status line
-set colorcolumn=               " Disable vertical guide columns
-set signcolumn=no              " Do not reserve the 2-character sign gutter
-set numberwidth=1              " Minimize left padding in the number column
-set nocursorcolumn             " Disable highlighted cursor column
-set wildmode=longest:full,full " Completion behavior for Tab cycling
+set ruler
+set number
+set nolist
+set mouse=a
+set wildmenu
+set showmatch
+set cursorline
+set splitbelow
+set splitright
+set listchars=
+set scrolloff=5
+set laststatus=2
+set colorcolumn=
+set signcolumn=no
+set numberwidth=1
+set nocursorcolumn
+set wildmode=longest:full,full
 
 " Truecolor when the terminal advertises it (tmux passes Tc); cterm values below
 " keep the purple accents working on plain 256-color terminals.
@@ -34,29 +34,29 @@ let g:indentLine_enabled = 0
 let g:indent_blankline_enabled = 0
 
 " Indentation
-set expandtab                  " Insert spaces instead of literal tab characters
-set tabstop=4                  " Display a hard tab character as 4 spaces
-set autoindent                 " Copy indentation from current line
-set shiftround                 " Round indent operations to multiples of shiftwidth
-set smartindent                " Smart auto-indenting for common code patterns
-set shiftwidth=4               " Indent/outdent commands use 4 spaces
-set softtabstop=4              " Tab/Backspace in insert mode act like 4 spaces
-set backspace=indent,eol,start " Allow backspace over indent/eol/insert-start
+set expandtab
+set tabstop=4
+set autoindent
+set shiftround
+set smartindent
+set shiftwidth=4
+set softtabstop=4
+set backspace=indent,eol,start
 
 " Search
-set hlsearch   " Highlight all matches after a search
-set gdefault   " :substitute uses global replacement by default
-set incsearch  " Show matches while typing search pattern
-set smartcase  " Switch to case-sensitive if pattern has uppercase
-set ignorecase " Case-insensitive search by default
+set hlsearch
+set gdefault
+set incsearch
+set smartcase
+set ignorecase
 
 " Files & Buffers
-set hidden        " Allow switching buffers with unsaved changes
-set autoread      " Auto-reload file when changed outside Vim
-set nobackup      " Do not create backup files
-set undofile      " Persist undo history to disk
-set noswapfile    " Do not create swap files
-set nowritebackup " Do not make backup before overwriting a file
+set hidden
+set autoread
+set nobackup
+set undofile
+set noswapfile
+set nowritebackup
 
 " Keep undo history between sessions
 if has('persistent_undo')
@@ -73,8 +73,8 @@ if has('clipboard')
 endif
 
 " Faster UI feedback
-set updatetime=300 " Faster CursorHold events and plugin refreshes
-set timeoutlen=500 " Wait 500ms for mapped key sequences
+set updatetime=300
+set timeoutlen=500
 
 " Key Mappings
 let mapleader = " " " Use Space as the leader key prefix
@@ -83,40 +83,40 @@ let mapleader = " " " Use Space as the leader key prefix
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Split navigation
-nnoremap <C-h> <C-w>h " Move to left split
-nnoremap <C-j> <C-w>j " Move to split below
-nnoremap <C-k> <C-w>k " Move to split above
-nnoremap <C-l> <C-w>l " Move to right split
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Buffer navigation
-nnoremap <leader>bn :bnext<CR>     " Go to next buffer
-nnoremap <leader>bd :bdelete<CR>   " Close current buffer
-nnoremap <leader>bp :bprevious<CR> " Go to previous buffer
+nnoremap <leader>bn :bnext<CR>
+nnoremap <leader>bd :bdelete<CR>
+nnoremap <leader>bp :bprevious<CR>
 
 " Save and quit shortcuts
-nnoremap <leader>w :w<CR> " Save current buffer
-nnoremap <leader>q :q<CR> " Quit current window
-nnoremap <leader>x :x<CR> " Save (if needed) and quit
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>x :x<CR>
 
 " Keep visual selection when shifting indentation
-vnoremap < <gv " Outdent selection and keep it selected
-vnoremap > >gv " Indent selection and keep it selected
+vnoremap < <gv
+vnoremap > >gv
 
 " Enhancements
-set confirm           " Prompt to save instead of failing :q on unsaved changes
-set lazyredraw        " Skip redraw during macros for speed
-set wildignorecase    " Case-insensitive filename completion
-set shortmess-=S      " Show search match count [1/5] in the ruler
-set foldmethod=indent " Fold by indentation
-set foldlevelstart=99 " Open all folds on file open
-set path+=**          " Recursive :find from the working directory
+set confirm
+set lazyredraw
+set wildignorecase
+set shortmess-=S
+set foldmethod=indent
+set foldlevelstart=99
+set path+=**
 set wildignore+=*/node_modules/*,*/.git/*,*/dist/*,*/__pycache__/*,*.pyc,*.o
 
 " Built-in netrw file explorer
-let g:netrw_banner=0       " Hide the top banner
-let g:netrw_liststyle=3    " Tree-style listing
-let g:netrw_winsize=25     " Explorer pane = 25% width
-let g:netrw_browse_split=0 " Open files in the same window
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+let g:netrw_winsize=25
+let g:netrw_browse_split=0
 
 " Toggle the file explorer
 nnoremap <leader>e :Lexplore<CR>
@@ -153,9 +153,9 @@ augroup TrailingWhitespace
 augroup END
 
 " Syntax & Colors
-syntax on                  " Enable syntax highlighting
-set background=dark        " Prefer dark background color adjustments
-filetype plugin indent on  " Enable filetype detection, plugins, and indent rules
+syntax on
+set background=dark
+filetype plugin indent on
 
 " Make line-number gutter dark gray so it stands apart from code
 augroup LineNumberColors
@@ -229,4 +229,4 @@ set statusline+=%#StatusAccent#\ %f\ %#StatusLine#
 set statusline+=\ %h%w%m%r
 set statusline+=%=
 set statusline+=\ %y\ %{&fileencoding!=#''?&fileencoding:&encoding}\
-set statusline+=%#StatusAccent#\ %l:%c\ %p%%\ 
+set statusline+=%#StatusAccent#\ %l:%c\ %p%%\

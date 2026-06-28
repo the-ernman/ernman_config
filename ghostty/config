@@ -1,0 +1,58 @@
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+
+font-family = JetBrains Mono
+font-size = 14
+font-thicken = true
+font-feature = calt, liga, ss01, ss19, ss20, cv01, zero
+adjust-cell-height = 10%
+
+macos-titlebar-style = tabs
+macos-option-as-alt = true
+window-colorspace = display-p3
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+window-save-state = always
+macos-window-shadow = true
+macos-icon = custom-style
+macos-icon-frame = chrome
+macos-icon-ghost-color = #c6a0f6
+macos-icon-screen-color = #1e1e2e,#302d41
+
+background-opacity = 0.92
+background-opacity-cells = true
+background-blur = true
+custom-shader = shaders/cyber-glow.glsl
+custom-shader-animation = true
+minimum-contrast = 1.1
+
+cursor-style = block
+cursor-style-blink = true
+cursor-text = cell-background
+cursor-click-to-move = true
+mouse-hide-while-typing = true
+unfocused-split-opacity = 0.75
+
+copy-on-select = clipboard
+clipboard-paste-protection = true
+clipboard-trim-trailing-spaces = true
+scrollback-limit = 100000000
+
+shell-integration = detect
+shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = notify
+auto-update = check
+auto-update-channel = stable
+
+bell-features = attention,title,no-audio,no-system,border
+
+quick-terminal-position = top
+quick-terminal-animation-duration = 0.15
+quick-terminal-autohide = true
+
+keybind = global:super+backquote=toggle_quick_terminal
+
+command-palette-entry = title:Toggle Transparency, action:toggle_background_opacity
+command-palette-entry = title:Reset Terminal, action:reset
+command-palette-entry = title:Toggle Mouse Reporting, action:toggle_mouse_reporting

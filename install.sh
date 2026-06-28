@@ -4,7 +4,7 @@ set -euo pipefail
 readonly SCRIPT_NAME="${0##*/}"
 readonly REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly HOME_DIR="${HOME}"
-readonly VALID_COMPONENTS=(bash vim vi neovim tmux copilot omp)
+readonly VALID_COMPONENTS=(bash vim vi neovim tmux copilot omp ghostty)
 readonly FILES=(
     "bash/.bashrc"
     "bash/.bash_profile"
@@ -34,6 +34,10 @@ function main() {
     fi
     if component_enabled "omp"; then
         install_omp
+    fi
+    if component_enabled "ghostty"; then
+        [[ ! -d "${HOME_DIR}/.config" ]] && run_or_echo mkdir -p "${HOME_DIR}/.config"
+        link_directory "ghostty" "${HOME_DIR}/.config/ghostty"
     fi
 
     printf '\n'
