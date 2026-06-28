@@ -1,0 +1,48 @@
+" Behavioral parity subset of the vim config options + mappings only.
+set nocompatible
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set shiftround
+set number
+set showmatch
+set ignorecase
+set smartcase
+set hidden
+set autoread
+set nobackup
+set nowritebackup
+set noswapfile
+set backspace=indent,eol,start
+set scrolloff=5
+set history=1000
+set wildmenu
+set wildmode=longest:full,full
+set splitbelow
+set splitright
+set background=dark
+
+" Window navigation (Ctrl-h/j/k/l)
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Save / quit (Space prefix mirrors the vim leader maps)
+nnoremap <Space>w :w<CR>
+nnoremap <Space>q :q<CR>
+nnoremap <Space>x :x<CR>
+
+" Buffer navigation
+nnoremap <Space>bn :bnext<CR>
+nnoremap <Space>bp :bprevious<CR>
+nnoremap <Space>bd :bdelete<CR>
+
+" Keep visual selection while indenting
+vnoremap < <gv
+vnoremap > >gv
+
+" Syntax
+syntax on

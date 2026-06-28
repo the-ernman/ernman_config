@@ -1,0 +1,32 @@
+symbolPreset: unicode
+theme: 
+  dark: obsidian
+setupVersion: 1
+modelRoles: 
+  default: github-copilot/claude-opus-4.8:xhigh
+  task: github-copilot/gemini-3.5-flash
+statusLine: 
+  preset: full
+  separator: powerline
+  sessionAccent: true
+github: 
+  enabled: true
+plan: 
+  defaultOnStartup: true
+task: 
+  eager: preferred
+browser: 
+  headless: false
+defaultThinkingLevel: auto
+read: 
+  defaultLimit: 200
+tools: 
+  artifactSpillThreshold: 30
+compaction: 
+  thresholdPercent: 75
+memory: 
+  backend: mnemopi
+mnemopi: 
+  noEmbeddings: true
+  injectionTokenLimit: 3000
+  recallLimit: 6
