@@ -3,8 +3,8 @@
 # Search Aliases
 alias aliass="alias | grep -i"
 
-# Use vim if available otherwise fallback to vi
-alias v='$(command -v vim &> /dev/null && echo "vim" || echo "vi")'
+# Editor shortcut (resolves to $EDITOR configured in .bashrc)
+alias v='${EDITOR:-vi}'
 
 # Navigation
 alias ..='cd ..'
@@ -25,7 +25,15 @@ alias hgrep='history | grep'
 alias l='ls -CF'
 alias ll='ls -lhF'
 alias la='ls -lAhF'
-alias ls='ls --color=auto'
+if ls --version &> /dev/null;
+then
+    alias ls='ls --color=auto --group-directories-first'
+elif command -v gls &> /dev/null;
+then
+    alias ls='gls --color=auto --group-directories-first'
+else
+    alias ls='ls -G'
+fi
 
 # Safety Nets
 alias rm='rm -i'
@@ -157,9 +165,8 @@ alias findid='find . -type d -iname'
 alias findx='find . -executable -type f -name'
 
 # Ruff
-alias ruff='ruff'
 alias ruffc='ruff check'
-alias ruffcf='ruff check'
+alias ruffcf='ruff check --fix'
 alias rufff='ruff format'
 alias rufffc='ruff format --check'
 
