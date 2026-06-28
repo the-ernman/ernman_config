@@ -25,10 +25,10 @@ function main() {
         log_info "=== Applying changes ==="
     fi
 
-    local home_config_dir="${HOME_DIR}/.home_config"
-    [[ ! -d "$home_config_dir" ]] && run_or_echo mkdir -p "$home_config_dir"
+    local ernman_config_dir="${HOME_DIR}/.ernman_config"
+    [[ ! -d "$ernman_config_dir" ]] && run_or_echo mkdir -p "$ernman_config_dir"
 
-    install_managed_files "$home_config_dir"
+    install_managed_files "$ernman_config_dir"
     if component_enabled "copilot"; then
         link_directory "copilot" "${HOME_DIR}/.copilot"
     fi
@@ -85,7 +85,7 @@ function validate_components() {
 }
 
 function install_managed_files() {
-    local home_config_dir="$1"
+    local ernman_config_dir="$1"
     local file file_basename file_parent_dir comment_char source_cmd source_line target_home_file target_dir
 
     for file in "${FILES[@]}"; do
@@ -102,28 +102,28 @@ function install_managed_files() {
             bash)
                 comment_char="#"
                 source_cmd="source"
-                source_line="$source_cmd \"\$HOME/.home_config/${file_basename}\""
+                source_line="$source_cmd \"\$HOME/.ernman_config/${file_basename}\""
                 ;;
             vim)
                 comment_char='"'
                 source_cmd="source"
-                source_line="$source_cmd \$HOME/.home_config/${file_basename}"
+                source_line="$source_cmd \$HOME/.ernman_config/${file_basename}"
                 ;;
             vi)
                 comment_char='"'
                 source_cmd="source"
-                source_line="$source_cmd \$HOME/.home_config/${file_basename}"
+                source_line="$source_cmd \$HOME/.ernman_config/${file_basename}"
                 ;;
             neovim)
                 comment_char='"'
                 source_cmd="source"
-                source_line="$source_cmd \$HOME/.home_config/${file_basename}"
+                source_line="$source_cmd \$HOME/.ernman_config/${file_basename}"
                 target_home_file="${HOME}/.config/nvim/${file_basename}"
                 ;;
             tmux)
                 comment_char="#"
                 source_cmd="source-file"
-                source_line="$source_cmd \"\$HOME/.home_config/${file_basename}\""
+                source_line="$source_cmd \"\$HOME/.ernman_config/${file_basename}\""
                 ;;
             *)
                 log_warn "Unknown file type for $file, skipping."
@@ -131,13 +131,13 @@ function install_managed_files() {
                 ;;
         esac
 
-        link_managed_file "$file" "${home_config_dir}/${file_basename}"
+        link_managed_file "$file" "${ernman_config_dir}/${file_basename}"
         target_dir="$(dirname "$target_home_file")"
         [[ "$target_dir" != "$HOME" && ! -d "$target_dir" ]] && run_or_echo mkdir -p "$target_dir"
         ensure_block \
             "$target_home_file" \
-            "${comment_char} >>> home_config managed ${file_basename} >>>" \
-            "${comment_char} <<< home_config managed ${file_basename} <<<" \
+            "${comment_char} >>> ernman_config managed ${file_basename} >>>" \
+            "${comment_char} <<< ernman_config managed ${file_basename} <<<" \
             "$source_line"
     done
 }
