@@ -17,6 +17,8 @@ The installer is safe by default (dry-run) and only writes anything when you pas
 | `vim`     | Superior Vim config (`.vimrc`) |
 | `vi`      | Reduced `vi` config (`.virc`), as close as it can get to vim config |
 | `neovim`  | Neovim config (`init.vim`), mirrors the vim config |
+| `vscode`  | VS Code theme extension (`~/.vscode/extensions/`) |
+| `zed`     | Zed theme files (`~/.config/zed/themes/`) |
 | `tmux`    | tmux config (`.tmux.conf`) |
 | `copilot` | GitHub Copilot customization (`.copilot/`) |
 | `omp`     | oh-my-pi (`omp`) config (`~/.omp/agent/`), modeled loosley on the copilot config |
@@ -72,7 +74,9 @@ Help, for when all of the above was somehow not enough:
 ## After Applying
 
 - Bash: open a new shell, or run `source ~/.bashrc`
-- tmux: run `tmux source-file ~/.tmux.conf`
+- VS Code: select `Ernman Cracked Purple` via `Preferences: Color Theme`
+- Zed: select `Ernman Cracked Purple` in the theme picker
+- tmux: run `tmux source-file ~/.tmux.conf` to reload bindings and the purple theme refresh
 - Vim: restart Vim
 - Vi: restart vi (config: `~/.virc`)
 - Neovim: restart nvim (config: `~/.config/nvim/init.vim`)

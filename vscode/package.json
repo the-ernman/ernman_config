@@ -1,0 +1,22 @@
+{
+  "name": "ernman-cracked-purple-theme",
+  "displayName": "Ernman Cracked Purple Theme",
+  "publisher": "ernman",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "*"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "id": "ernman-cracked-purple",
+        "label": "Ernman Cracked Purple",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ernman-cracked-purple-color-theme.json"
+      }
+    ]
+  }
+}

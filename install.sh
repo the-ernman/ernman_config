@@ -4,7 +4,7 @@ set -euo pipefail
 readonly SCRIPT_NAME="${0##*/}"
 readonly REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly HOME_DIR="${HOME}"
-readonly VALID_COMPONENTS=(bash vim vi neovim tmux copilot omp ghostty)
+readonly VALID_COMPONENTS=(bash vim vi neovim tmux copilot omp ghostty vscode zed)
 readonly FILES=(
     "bash/.bashrc"
     "bash/.bash_profile"
@@ -38,6 +38,14 @@ function main() {
     if component_enabled "ghostty"; then
         [[ ! -d "${HOME_DIR}/.config" ]] && run_or_echo mkdir -p "${HOME_DIR}/.config"
         link_directory "ghostty" "${HOME_DIR}/.config/ghostty"
+    fi
+    if component_enabled "vscode"; then
+        [[ ! -d "${HOME_DIR}/.vscode/extensions" ]] && run_or_echo mkdir -p "${HOME_DIR}/.vscode/extensions"
+        link_directory "vscode" "${HOME_DIR}/.vscode/extensions/ernman.ernman-cracked-purple-theme-0.0.1"
+    fi
+    if component_enabled "zed"; then
+        [[ ! -d "${HOME_DIR}/.config/zed" ]] && run_or_echo mkdir -p "${HOME_DIR}/.config/zed"
+        link_path "zed/themes" "${HOME_DIR}/.config/zed/themes"
     fi
 
     printf '\n'
