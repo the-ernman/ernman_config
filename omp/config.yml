@@ -1,110 +1,119 @@
 symbolPreset: unicode
-theme: 
+theme:
   dark: obsidian
 setupVersion: 1
-modelRoles: 
-  default: github-copilot/gpt-5.2-codex:high
-  task: github-copilot/gpt-5.4-mini:medium
-  plan: github-copilot/gpt-5.5:xhigh
-  slow: github-copilot/claude-opus-4.8:xhigh
-  advisor: github-copilot/gpt-5.5:high
-  vision: github-copilot/gpt-5.2:high
-  smol: github-copilot/claude-haiku-4.5:low
+modelRoles:
+  default: github-copilot/gpt-5.3-codex:high
+  task: github-copilot/gpt-5.4-mini:high
+  plan: github-copilot/gpt-5.5-1m:xhigh
+  slow: github-copilot/claude-opus-4.8-1m:xhigh
+  advisor: github-copilot/claude-sonnet-4.6:high
+  vision: github-copilot/gemini-3-pro-preview:high
+  smol: github-copilot/gpt-5-mini:low
   tiny: github-copilot/gpt-5.4-nano:minimal
-  commit: github-copilot/claude-haiku-4.5:low
-  designer: github-copilot/gpt-5.2:high
-modelProviderOrder: 
+  commit: github-copilot/gpt-5-mini:low
+  designer: github-copilot/gpt-5.4:high
+modelProviderOrder:
   - github-copilot
   - openai
   - anthropic
   - google-gemini-cli
   - nvidia
-cycleOrder: 
+cycleOrder:
   - smol
   - default
   - task
   - plan
   - slow
-retry: 
+retry:
   maxRetries: 3
   baseDelayMs: 5000
-  fallbackChains: 
-    default: 
+  fallbackChains:
+    default:
+      - github-copilot/gpt-5.3-codex:high
       - github-copilot/gpt-5.2-codex:high
       - openai/gpt-5.2-codex:high
       - anthropic/claude-sonnet-4-6:high
-      - google-gemini-cli/gemini-3-pro-preview:high
+      - google-gemini-cli/gemini-3.1-pro-preview:high
       - github-copilot/claude-opus-4.8:high
-    task: 
-      - github-copilot/gpt-5.4-mini:medium
+    task:
+      - github-copilot/gpt-5.4-mini:high
+      - github-copilot/gpt-5-mini:medium
       - openai/gpt-5.1-codex-mini:high
       - anthropic/claude-haiku-4-5:medium
       - google-gemini-cli/gemini-3.5-flash:medium
-    plan: 
+    plan:
+      - github-copilot/gpt-5.5-1m:xhigh
       - github-copilot/gpt-5.5:xhigh
       - openai/gpt-5.3-codex:xhigh
-      - anthropic/claude-opus-4-8:xhigh
-      - google-gemini-cli/gemini-3-pro-preview:high
-    slow: 
+      - anthropic/claude-opus-4-8-1m:xhigh
+      - google-gemini-cli/gemini-3.1-pro-preview:high
+    slow:
+      - github-copilot/claude-opus-4.8-1m:xhigh
       - github-copilot/claude-opus-4.8:xhigh
       - anthropic/claude-opus-4-8:xhigh
-      - openai/gpt-5.5:xhigh
       - openai/gpt-5.3-codex:xhigh
-    advisor: 
+      - openai/gpt-5.5:xhigh
+    advisor:
+      - github-copilot/claude-sonnet-4.6:high
       - github-copilot/gpt-5.5:high
       - openai/gpt-5.2-codex:high
       - anthropic/claude-sonnet-4-6:high
-    vision: 
+    vision:
+      - github-copilot/gemini-3-pro-preview:high
       - github-copilot/gpt-5.2:high
       - google-gemini-cli/gemini-3-pro-preview:high
       - openai/gpt-5.1-codex:high
-    smol: 
+    smol:
+      - github-copilot/gpt-5-mini:low
       - github-copilot/claude-haiku-4.5:low
       - anthropic/claude-haiku-4-5:low
-      - openai/gpt-5.4-nano:low
       - google-gemini-cli/gemini-3.5-flash:low
-    tiny: 
+      - openai/gpt-5.4-nano:low
+    tiny:
       - github-copilot/gpt-5.4-nano:minimal
       - openai/gpt-5.4-nano:minimal
       - github-copilot/claude-haiku-4.5:minimal
-    commit: 
+    commit:
+      - github-copilot/gpt-5-mini:low
       - github-copilot/claude-haiku-4.5:low
       - anthropic/claude-haiku-4-5:low
       - openai/gpt-5.4-nano:low
-    designer: 
-      - github-copilot/gpt-5.2:high
+    designer:
+      - github-copilot/gpt-5.4:high
+      - github-copilot/gemini-3-pro-preview:high
       - google-gemini-cli/gemini-3-pro-preview:high
       - openai/gpt-5.1-codex:high
       - anthropic/claude-sonnet-4-6:high
   fallbackRevertPolicy: cooldown-expiry
-statusLine: 
+statusLine:
   preset: full
   separator: powerline
   sessionAccent: true
 steeringMode: one-at-a-time
 followUpMode: one-at-a-time
 interruptMode: immediate
-ttsr: 
+ttsr:
   enabled: true
   builtinRules: true
   contextMode: keep
   interruptMode: always
   repeatMode: after-gap
   repeatGap: 6
-github: 
+github:
   enabled: true
-advisor: 
+advisor:
   enabled: true
   subagents: true
   syncBacklog: 3
   immuneTurns: 1
-plan: 
+plan:
   defaultOnStartup: true
-task: 
+task:
   eager: always
   showResolvedModelBadge: true
   enableLsp: true
-  isolation: 
+  isolation:
     mode: auto
     merge: patch
     commits: ai
@@ -112,18 +121,18 @@ task:
   maxRecursionDepth: 3
   agentIdleTtlMs: 900000
   softRequestBudget: 140
-browser: 
+browser:
   headless: false
 defaultThinkingLevel: auto
-bash: 
+bash:
   enabled: true
-  autoBackground: 
+  autoBackground:
     enabled: true
     thresholdMs: 20000
   stripTrailingHeadTail: true
-bashInterceptor: 
+bashInterceptor:
   enabled: true
-  patterns: 
+  patterns:
     - pattern: ^\s*(cat|head|tail|less|more)\s+
       tool: read
       message: "Use the `read` tool instead of cat/head/tail. It provides better context and handles binary files."
@@ -145,26 +154,26 @@ bashInterceptor:
     - pattern: "^\\s*(echo|printf|cat\\s*<<)\\s+(?:[^\"'>]|\"[^\"]*\"|'[^']*')*(?<!\\|)>{1,2}\\|?\\s*[$\\w./~\"'-]"
       tool: write
       message: "Use the `write` tool instead of echo/cat redirection. It handles encoding and provides confirmation."
-python: 
+python:
   toolMode: both
   kernelMode: session
   sharedGateway: false
-lsp: 
+lsp:
   enabled: true
   formatOnWrite: true
   diagnosticsOnWrite: true
   diagnosticsOnEdit: true
-extensions: 
+extensions:
   []
-disabledExtensions: 
+disabledExtensions:
   []
-read: 
+read:
   defaultLimit: 200
-tools: 
+tools:
   artifactSpillThreshold: 30
   discoveryMode: all
   approvalMode: yolo
-skills: 
+skills:
   enabled: true
   enableSkillCommands: true
   enableCodexUser: true
@@ -174,41 +183,41 @@ skills:
   enablePiProject: true
   enableAgentsUser: true
   enableAgentsProject: true
-  customDirectories: 
+  customDirectories:
     []
-  ignoredSkills: 
+  ignoredSkills:
     []
-  includeSkills: 
+  includeSkills:
     []
-compaction: 
+compaction:
   enabled: true
   strategy: context-full
   thresholdPercent: 85
   idleEnabled: true
   autoContinue: true
-memory: 
+memory:
   backend: mnemopi
-memories: 
+memories:
   enabled: true
-contextPromotion: 
+contextPromotion:
   enabled: false
-images: 
+images:
   blockImages: true
   autoResize: true
-terminal: 
+terminal:
   showImages: true
-mcp: 
+mcp:
   enableProjectConfig: true
   discoveryMode: true
   notifications: true
   notificationDebounceMs: 250
-todo: 
+todo:
   enabled: true
   eager: always
   reminders: true
-tasks: 
+tasks:
   todoClearDelay: 300
-mnemopi: 
+mnemopi:
   noEmbeddings: true
   injectionTokenLimit: 5000
   recallLimit: 10
@@ -216,10 +225,10 @@ mnemopi:
   enhancedRecall: true
   proactiveLinking: true
   polyphonicRecall: true
-display: 
+display:
   showTokenUsage: true
 personality: pragmatic
-power: 
+power:
   sleepPrevention: system
-features: 
+features:
   unexpectedStopDetection: true
