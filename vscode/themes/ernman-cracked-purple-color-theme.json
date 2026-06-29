@@ -191,7 +191,7 @@
         "entity.name.tag"
       ],
       "settings": {
-        "foreground": "#74c7ec"
+        "foreground": "#7dcfff"
       }
     },
     {
@@ -200,7 +200,7 @@
         "keyword.operator"
       ],
       "settings": {
-        "foreground": "#94e2d5"
+        "foreground": "#91d7e3"
       }
     },
     {
@@ -209,7 +209,7 @@
         "punctuation"
       ],
       "settings": {
-        "foreground": "#d7d7ff"
+        "foreground": "#6e6a86"
       }
     },
     {
@@ -222,7 +222,7 @@
         "entity.name.operator.custom-literal"
       ],
       "settings": {
-        "foreground": "#74c7ec"
+        "foreground": "#7dcfff"
       }
     },
     {
@@ -232,7 +232,6 @@
         "support.type",
         "entity.name.type",
         "entity.name.namespace",
-        "entity.other.attribute",
         "entity.name.scope-resolution",
         "entity.name.class",
         "storage.type.numeric.go",
@@ -246,7 +245,6 @@
         "storage.type.generic.cs",
         "storage.type.modifier.cs",
         "storage.type.variable.cs",
-        "storage.type.annotation.java",
         "storage.type.generic.java",
         "storage.type.java",
         "storage.type.object.array.java",
@@ -254,7 +252,6 @@
         "storage.type.primitive.java",
         "storage.type.token.java",
         "storage.type.groovy",
-        "storage.type.annotation.groovy",
         "storage.type.parameters.groovy",
         "storage.type.generic.groovy",
         "storage.type.object.array.groovy",
@@ -262,7 +259,22 @@
         "storage.type.primitive.groovy"
       ],
       "settings": {
-        "foreground": "#b4befe"
+        "foreground": "#8aadf4"
+      }
+    },
+    {
+      "name": "Decorators and attributes",
+      "scope": [
+        "meta.decorator",
+        "entity.name.function.decorator",
+        "entity.other.attribute",
+        "entity.name.tag.attribute.tsx",
+        "meta.annotation",
+        "storage.type.annotation.java",
+        "storage.type.annotation.groovy"
+      ],
+      "settings": {
+        "foreground": "#d787ff"
       }
     },
     {
@@ -277,7 +289,7 @@
         "punctuation.separator.namespace.ruby"
       ],
       "settings": {
-        "foreground": "#b4befe"
+        "foreground": "#8aadf4"
       }
     },
     {
@@ -292,7 +304,28 @@
         "entity.name.operator"
       ],
       "settings": {
-        "foreground": "#aa90cf"
+        "foreground": "#c6a0f6"
+      }
+    },
+    {
+      "name": "Declaration and modifier keywords",
+      "scope": [
+        "keyword.declaration",
+        "storage.modifier",
+        "storage.type.function.python",
+        "storage.type.class.python",
+        "storage.type.function.arrow.ts",
+        "storage.type.class.ts",
+        "storage.type.interface.ts",
+        "storage.type.enum.ts",
+        "storage.type.function.rust",
+        "storage.type.struct.rust",
+        "storage.type.enum.rust",
+        "storage.type.trait.rust",
+        "storage.type.impl.rust"
+      ],
+      "settings": {
+        "foreground": "#ff9e64"
       }
     },
     {
@@ -306,6 +339,17 @@
       ],
       "settings": {
         "foreground": "#d7d7ff"
+      }
+    },
+    {
+      "name": "Parameters",
+      "scope": [
+        "variable.parameter",
+        "meta.function.parameters variable",
+        "meta.parameter"
+      ],
+      "settings": {
+        "foreground": "#f5c2e7"
       }
     },
     {
@@ -324,7 +368,7 @@
         "meta.object-literal.key"
       ],
       "settings": {
-        "foreground": "#d7d7ff"
+        "foreground": "#f38ba8"
       }
     },
     {
@@ -412,26 +456,26 @@
     }
   ],
   "semanticTokenColors": {
-    "class": "#b4befe",
-    "enum": "#b4befe",
-    "interface": "#b4befe",
-    "type": "#b4befe",
-    "typeParameter": "#b4befe",
-    "function": "#74c7ec",
-    "method": "#74c7ec",
-    "namespace": "#94e2d5",
-    "decorator": "#94e2d5",
-    "operator": "#94e2d5",
-    "parameter": "#d7d7ff",
+    "class": "#8aadf4",
+    "enum": "#8aadf4",
+    "interface": "#8aadf4",
+    "type": "#8aadf4",
+    "typeParameter": "#b7bdf8",
+    "function": "#7dcfff",
+    "method": "#7dcfff",
+    "namespace": "#8aadf4",
+    "decorator": "#d787ff",
+    "operator": "#91d7e3",
+    "parameter": "#f5c2e7",
     "variable": "#d7d7ff",
     "property": "#f38ba8",
-    "enumMember": "#f38ba8",
+    "enumMember": "#f9e2af",
     "variable.readonly": "#f9e2af",
     "property.readonly": "#f9e2af",
     "customLiteral": "#f9e2af",
     "macro": "#f9e2af",
-    "keyword": "#aa90cf",
-    "newOperator": "#aa90cf",
+    "keyword": "#c6a0f6",
+    "newOperator": "#c6a0f6",
     "string": "#a6e3a1",
     "stringLiteral": "#a6e3a1",
     "number": "#fab387",
