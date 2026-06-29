@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='SessionStart' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "SessionEnd": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='SessionEnd' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='UserPromptSubmit' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "PreToolUse": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='PreToolUse' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "PostToolUse": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='PostToolUse' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='PostToolUseFailure' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "subagentStart": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='subagentStart' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "SubagentStop": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='SubagentStop' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "PreCompact": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='PreCompact' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='Stop' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "ErrorOccurred": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='ErrorOccurred' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='PermissionRequest' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ],
+    "Notification": [
+      {
+        "type": "command",
+        "bash": "if [ -x '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh' ]; then ORCA_COPILOT_HOOK_EVENT='Notification' /bin/sh '/Users/duckwore/.orca/agent-hooks/copilot-hook.sh'; fi",
+        "timeoutSec": 5
+      }
+    ]
+  }
+}
