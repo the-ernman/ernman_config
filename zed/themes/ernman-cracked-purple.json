@@ -322,7 +322,39 @@
             "font_style": null,
             "font_weight": null
           }
-        }
+        },
+        "element.background": "#2a2440ff",
+        "element.hover": "#302d41ff",
+        "element.active": "#3a2a5aff",
+        "element.selected": "#3a2a5aff",
+        "element.disabled": "#2a2440ff",
+        "ghost_element.background": "#00000000",
+        "ghost_element.hover": "#302d41ff",
+        "ghost_element.active": "#3a2a5aff",
+        "ghost_element.selected": "#3a2a5aff",
+        "ghost_element.disabled": "#2a2440ff",
+        "drop_target.background": "#af87ff80",
+        "link_text.hover": "#af87ffff",
+        "version_control.added": "#a6e3a1ff",
+        "version_control.modified": "#f9e2afff",
+        "version_control.deleted": "#f38ba8ff",
+        "version_control.word_added": "#a6e3a159",
+        "version_control.word_deleted": "#f38ba8CC",
+        "error": "#f38ba8ff",
+        "error.background": "#f38ba81a",
+        "error.border": "#f38ba859",
+        "warning": "#fab387ff",
+        "warning.background": "#fab3871a",
+        "warning.border": "#fab38759",
+        "info": "#af87ffff",
+        "info.background": "#af87ff1a",
+        "info.border": "#af87ff59",
+        "hint": "#94e2d5ff",
+        "hint.background": "#94e2d51a",
+        "hint.border": "#94e2d559",
+        "conflict": "#fab387ff",
+        "conflict.background": "#fab3871a",
+        "conflict.border": "#fab38759"
       }
     }
   ]
