@@ -18,11 +18,11 @@
         "text.muted": "#6c6c6c",
         "text.placeholder": "#6c6c6c",
         "text.disabled": "#6c6c6c",
-        "text.accent": "#c6a0f6",
+        "text.accent": "#aa90cf",
         "icon": "#d7d7ff",
         "icon.muted": "#6c6c6c",
         "icon.placeholder": "#6c6c6c",
-        "icon.accent": "#c6a0f6",
+        "icon.accent": "#aa90cf",
         "status_bar.background": "#2a2440",
         "title_bar.background": "#1f1f1f",
         "title_bar.inactive_background": "#1e1e2e",
@@ -63,7 +63,7 @@
         "terminal.ansi.green": "#a6e3a1",
         "terminal.ansi.yellow": "#f9e2af",
         "terminal.ansi.blue": "#74c7ec",
-        "terminal.ansi.magenta": "#c6a0f6",
+        "terminal.ansi.magenta": "#aa90cf",
         "terminal.ansi.cyan": "#94e2d5",
         "terminal.ansi.white": "#d7d7ff",
         "terminal.ansi.bright_black": "#6c6c6c",
@@ -76,9 +76,9 @@
         "terminal.ansi.bright_white": "#ffffff",
         "players": [
           {
-            "cursor": "#c6a0f6",
-            "background": "#c6a0f6",
-            "selection": "#c6a0f63d"
+            "cursor": "#aa90cf",
+            "background": "#aa90cf",
+            "selection": "#aa90cf3d"
           },
           {
             "cursor": "#f38ba8",
@@ -153,12 +153,12 @@
             "font_weight": null
           },
           "emphasis": {
-            "color": "#c6a0f6",
+            "color": "#aa90cf",
             "font_style": null,
             "font_weight": null
           },
           "emphasis.strong": {
-            "color": "#c6a0f6",
+            "color": "#aa90cf",
             "font_style": null,
             "font_weight": 700
           },
@@ -178,7 +178,7 @@
             "font_weight": null
           },
           "keyword": {
-            "color": "#c6a0f6",
+            "color": "#aa90cf",
             "font_style": null,
             "font_weight": null
           },
@@ -218,7 +218,7 @@
             "font_weight": null
           },
           "preproc": {
-            "color": "#c6a0f6",
+            "color": "#aa90cf",
             "font_style": null,
             "font_weight": null
           },

@@ -105,7 +105,7 @@
     "terminal.ansiGreen": "#a6e3a1",
     "terminal.ansiYellow": "#f9e2af",
     "terminal.ansiBlue": "#74c7ec",
-    "terminal.ansiMagenta": "#c6a0f6",
+    "terminal.ansiMagenta": "#aa90cf",
     "terminal.ansiCyan": "#94e2d5",
     "terminal.ansiWhite": "#d7d7ff",
     "terminal.ansiBrightBlack": "#6c6c6c",
@@ -144,7 +144,7 @@
     "editorBracketHighlight.foreground3": "#a6e3a1",
     "editorBracketHighlight.foreground4": "#f38ba8",
     "editorBracketHighlight.foreground5": "#94e2d5",
-    "editorBracketHighlight.foreground6": "#c6a0f6"
+    "editorBracketHighlight.foreground6": "#aa90cf"
   },
   "tokenColors": [
     {
@@ -292,7 +292,7 @@
         "entity.name.operator"
       ],
       "settings": {
-        "foreground": "#c6a0f6"
+        "foreground": "#aa90cf"
       }
     },
     {
@@ -430,8 +430,8 @@
     "property.readonly": "#f9e2af",
     "customLiteral": "#f9e2af",
     "macro": "#f9e2af",
-    "keyword": "#c6a0f6",
-    "newOperator": "#c6a0f6",
+    "keyword": "#aa90cf",
+    "newOperator": "#aa90cf",
     "string": "#a6e3a1",
     "stringLiteral": "#a6e3a1",
     "number": "#fab387",
