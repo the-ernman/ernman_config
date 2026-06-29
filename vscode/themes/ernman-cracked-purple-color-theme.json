@@ -5,7 +5,7 @@
   "semanticHighlighting": true,
   "colors": {
     "focusBorder": "#af87ff",
-    "foreground": "#d7d7ff",
+    "foreground": "#ffffff",
     "descriptionForeground": "#6c6c6c",
     "errorForeground": "#f38ba8",
     "icon.foreground": "#d7d7ff",
@@ -52,7 +52,7 @@
     "menu.foreground": "#d7d7ff",
     "menu.selectionBackground": "#3a2a5a",
     "editor.background": "#1f1f1f",
-    "editor.foreground": "#d7d7ff",
+    "editor.foreground": "#ffffff",
     "editorLineNumber.foreground": "#6c6c6c",
     "editorLineNumber.activeForeground": "#d787ff",
     "editorGutter.background": "#1f1f1f",
@@ -153,7 +153,18 @@
         "comment"
       ],
       "settings": {
-        "foreground": "#6c6c6c"
+        "foreground": "#817e7e"
+      }
+    },
+    {
+      "name": "Markdown prose",
+      "scope": [
+        "text.html.markdown",
+        "meta.paragraph.markdown",
+        "markup.paragraph.markdown"
+      ],
+      "settings": {
+        "foreground": "#ffffff"
       }
     },
     {
@@ -172,7 +183,7 @@
         "constant.language.boolean"
       ],
       "settings": {
-        "foreground": "#fab387"
+        "foreground": "#faaa78"
       }
     },
     {
@@ -182,7 +193,7 @@
         "support.constant"
       ],
       "settings": {
-        "foreground": "#f9e2af"
+        "foreground": "#b452ff"
       }
     },
     {
@@ -219,7 +230,12 @@
         "support.function",
         "support.constant.handlebars",
         "source.powershell variable.other.member",
-        "entity.name.operator.custom-literal"
+        "entity.name.operator.custom-literal",
+        "meta.function-call",
+        "entity.name.function.call",
+        "support.function.builtin",
+        "support.function.magic",
+        "meta.function-call.generic"
       ],
       "settings": {
         "foreground": "#7dcfff"
@@ -296,6 +312,17 @@
       "name": "Control flow and special keywords",
       "scope": [
         "keyword.control",
+        "keyword.control.import",
+        "keyword.control.from",
+        "keyword.control.export",
+        "keyword.control.conditional",
+        "keyword.control.loop",
+        "keyword.control.flow",
+        "keyword.control.return",
+        "keyword.control.trycatch",
+        "keyword.control.exception",
+        "keyword.control.c",
+        "keyword.control.cpp",
         "source.cpp keyword.operator.new",
         "keyword.operator.delete",
         "keyword.other.using",
@@ -308,10 +335,43 @@
       }
     },
     {
+      "name": "Broad keyword fallback",
+      "scope": [
+        "keyword",
+        "keyword.other",
+        "keyword.package.go",
+        "keyword.import.go",
+        "keyword.function.go",
+        "keyword.type.go",
+        "keyword.struct.go",
+        "keyword.interface.go",
+        "keyword.map.go",
+        "keyword.chan.go",
+        "keyword.var.go",
+        "keyword.const.go"
+      ],
+      "settings": {
+        "foreground": "#c6a0f6"
+      }
+    },
+    {
       "name": "Declaration and modifier keywords",
       "scope": [
         "keyword.declaration",
         "storage.modifier",
+        "storage.type.function",
+        "storage.type.class",
+        "storage.type.struct",
+        "storage.type.enum",
+        "storage.type.interface",
+        "storage.type.impl",
+        "storage.type.trait",
+        "storage.type.let",
+        "storage.type.const",
+        "storage.type.var",
+        "storage.modifier.c",
+        "storage.modifier.cpp",
+        "storage.modifier.rust",
         "storage.type.function.python",
         "storage.type.class.python",
         "storage.type.function.arrow.ts",
@@ -322,10 +382,30 @@
         "storage.type.struct.rust",
         "storage.type.enum.rust",
         "storage.type.trait.rust",
-        "storage.type.impl.rust"
+        "storage.type.impl.rust",
+        "storage.type.function.go",
+        "storage.type.interface.go",
+        "storage.type.struct.go",
+        "storage.type.map.go",
+        "storage.type.chan.go"
       ],
       "settings": {
         "foreground": "#ff9e64"
+      }
+    },
+    {
+      "name": "Storage type fallback",
+      "scope": [
+        "storage.type",
+        "storage.type.built-in",
+        "storage.type.primitive",
+        "storage.type.c",
+        "storage.type.cpp",
+        "storage.type.lua",
+        "storage.type.sql"
+      ],
+      "settings": {
+        "foreground": "#8aadf4"
       }
     },
     {
@@ -339,6 +419,19 @@
       ],
       "settings": {
         "foreground": "#d7d7ff"
+      }
+    },
+    {
+      "name": "Struct and object members",
+      "scope": [
+        "variable.other.member",
+        "variable.other.object.property",
+        "variable.other.property",
+        "meta.member.access",
+        "entity.other.attribute-name"
+      ],
+      "settings": {
+        "foreground": "#f38ba8"
       }
     },
     {
@@ -363,9 +456,19 @@
       }
     },
     {
-      "name": "Object keys, TS grammar specific",
+      "name": "Object and data-format keys",
       "scope": [
-        "meta.object-literal.key"
+        "meta.object-literal.key",
+        "support.type.property-name.json",
+        "entity.name.tag.yaml",
+        "keyword.key.toml",
+        "meta.tag.key.toml",
+        "entity.name.tag.toml",
+        "entity.name.table.toml",
+        "entity.name.table.array.toml",
+        "variable.other.readwrite.hcl",
+        "entity.name.label.hcl",
+        "entity.name.section.hcl"
       ],
       "settings": {
         "foreground": "#f38ba8"
@@ -448,10 +551,95 @@
       }
     },
     {
+      "name": "SQL keywords",
+      "scope": [
+        "keyword.other.DML.sql",
+        "keyword.other.DDL.sql",
+        "keyword.other.sql",
+        "keyword.other.create.sql",
+        "keyword.other.data-integrity.sql"
+      ],
+      "settings": {
+        "foreground": "#c6a0f6"
+      }
+    },
+    {
+      "name": "Bash builtins and keywords",
+      "scope": [
+        "support.function.builtin.shell",
+        "entity.name.command.shell",
+        "keyword.control.shell",
+        "keyword.operator.assignment.compound.bash"
+      ],
+      "settings": {
+        "foreground": "#c6a0f6"
+      }
+    },
+    {
+      "name": "Lua keywords",
+      "scope": [
+        "keyword.control.lua",
+        "keyword.local.lua",
+        "constant.language.lua"
+      ],
+      "settings": {
+        "foreground": "#c6a0f6"
+      }
+    },
+    {
+      "name": "C/C++ preprocessor",
+      "scope": [
+        "keyword.control.directive",
+        "meta.preprocessor",
+        "punctuation.definition.directive"
+      ],
+      "settings": {
+        "foreground": "#d787ff"
+      }
+    },
+    {
+      "name": "Language constants",
+      "scope": [
+        "constant.language",
+        "constant.language.null",
+        "constant.language.boolean",
+        "constant.language.nil",
+        "constant.language.undefined"
+      ],
+      "settings": {
+        "foreground": "#faaa78"
+      }
+    },
+    {
       "name": "Labels",
       "scope": "entity.name.label",
       "settings": {
         "foreground": "#f38ba8"
+      }
+    },
+    {
+      "name": "Plain text files",
+      "scope": [
+        "text.plain"
+      ],
+      "settings": {
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "name": "Markdown headings and emphasis",
+      "scope": [
+        "markup.heading.markdown",
+        "punctuation.definition.heading.markdown",
+        "markup.bold.markdown",
+        "punctuation.definition.bold.markdown",
+        "markup.italic.markdown",
+        "punctuation.definition.italic.markdown",
+        "markup.underline",
+        "markup.underline.link.markdown"
+      ],
+      "settings": {
+        "foreground": "#d787ff"
       }
     }
   ],
@@ -476,6 +664,13 @@
     "macro": "#f9e2af",
     "keyword": "#c6a0f6",
     "newOperator": "#c6a0f6",
+    "selfKeyword": "#c6a0f6",
+    "selfTypeKeyword": "#c6a0f6",
+    "builtinType": "#8aadf4",
+    "formatSpecifier": "#91d7e3",
+    "lifetime": "#d787ff",
+    "label": "#f38ba8",
+    "unresolvedReference": "#f38ba8",
     "string": "#a6e3a1",
     "stringLiteral": "#a6e3a1",
     "number": "#fab387",
