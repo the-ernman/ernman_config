@@ -93,8 +93,11 @@ function parse_args() {
 
 ## Tooling
 
-- `shellcheck`: mandatory, zero warnings
-- `shfmt`: indent=4, binary-next-line
+- Use the `bash-development/scripts/bash-format-lint.sh` script to format and lint bash scripts
+Example usage:
+```bash
+$ bash bash-development/scripts/bash-format-lint.sh --directory /path/to/scripts --file "file.sh" --verbose --file "file2.sh" --direcotry "/path/to/other/scripts"
+```
 
 ## Anti-patterns
 
