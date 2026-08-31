@@ -1,0 +1,15 @@
+{
+  "name": "json-fixture",
+  "count": 3,
+  "active": true,
+  "ratio": 2.75,
+  "tags": ["alpha", "beta", "gamma"],
+  "meta": {
+    "owner": "casey",
+    "paths": ["/tmp/a", "/tmp/b"],
+    "limits": {
+      "soft": 10,
+      "hard": 20
+    }
+  }
+}

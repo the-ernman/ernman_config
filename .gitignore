@@ -1,11 +1,13 @@
 # Backup files created by install.sh
 *.backup.*
 
-theme-tests/
-
 # OS / editor noise
 .DS_Store
 Thumbs.db
 *.swp
 *.swo
 *~
+
+# Python bytecode
+__pycache__/
+*.pyc

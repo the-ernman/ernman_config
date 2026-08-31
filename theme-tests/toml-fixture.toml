@@ -1,0 +1,21 @@
+title = "Theme Fixture"
+active = true
+count = 3
+ratio = 1.25
+
+[owner]
+name = "Alex"
+email = "alex@example.test"
+
+[database]
+ports = [5432, 5433, 5434]
+enabled = false
+temp_targets = ["/tmp/a", "/tmp/b"]
+
+[[servers]]
+name = "alpha"
+ip = "10.0.0.1"
+
+[[servers]]
+name = "beta"
+ip = "10.0.0.2"

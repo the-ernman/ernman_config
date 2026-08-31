@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theme Fixture</title>
+    <style>
+      body { font-family: monospace; margin: 2rem; }
+      .card[data-active="true"] { border: 1px solid #333; padding: 1rem; }
+    </style>
+  </head>
+  <body>
+    <main class="card" data-active="true">
+      <h1>HTML Fixture</h1>
+      <p>Hello <strong>theme</strong> test with <a href="https://example.com">link</a>.</p>
+      <ul>
+        <li data-id="1">alpha</li>
+        <li data-id="2">beta</li>
+      </ul>
+      <script>
+        const count = document.querySelectorAll("li").length;
+        console.log(`items=${count}`);
+      </script>
+    </main>
+  </body>
+</html>

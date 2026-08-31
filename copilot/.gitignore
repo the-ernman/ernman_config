@@ -1,2 +1,4 @@
 # Ignoring things added here by editor/copilot
 ide/
+config.json
+logs/

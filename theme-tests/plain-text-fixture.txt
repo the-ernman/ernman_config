@@ -1,0 +1,15 @@
+Theme test plain text fixture.
+
+This file stays neutral prose while still exercising punctuation, spacing, and symbols.
+It includes a URL: https://example.net/path?q=theme-test&lang=text.
+It includes numbers: 0, 7, 19.75, -12, and 1_000 written plainly.
+
+Indented block:
+    key: value
+    path: /tmp/theme-tests/sample.txt
+    note: keep ASCII only.
+
+Sentence with brackets [square], braces {curly}, and parentheses (round).
+Sentence with operators that should remain plain text: a+b, x->y, name=value, foo::bar.
+
+Closing line with quotes "double", 'single', and a trailing ellipsis...

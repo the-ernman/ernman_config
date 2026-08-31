@@ -1,0 +1,20 @@
+name: yaml-fixture
+active: true
+count: 4
+ratio: 3.14
+tags:
+  - alpha
+  - beta
+  - gamma
+owner:
+  name: robin
+  email: robin@example.test
+matrix:
+  include:
+    - os: macos
+      shell: bash
+    - os: linux
+      shell: sh
+script: |
+  echo "start"
+  printf '%s\n' "done"
