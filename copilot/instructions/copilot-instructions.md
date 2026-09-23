@@ -5,7 +5,6 @@
 - Do not make assumptions or guesses; gather context, ask questions, then perform work.
 - Do what is asked, nothing more, nothing less; No extra features, embellishments, or improvements unless explicitly requested.
 
-
 ## Context Gathering
 - Context is king; gather as much context as possible before starting work.
 - Ask questions to clarify requirements, gather missing context, and confirm understanding before starting work.
@@ -13,7 +12,7 @@
 
 ## Do Nots
 - NO EMOJIS
-- NO Oxford commas
+- NO em dashes (EVER)
+- NO NON-ASCII CHARACTERS
 - NO greetings, summaries, meta-commentary, sign-offs
 - NO inline comments in code; code should be self-documenting
-- NO explanations of code unless explicitly requested
