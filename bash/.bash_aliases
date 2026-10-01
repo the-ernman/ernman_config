@@ -77,6 +77,16 @@ alias ta='tmux attach -t'
 alias tls='tmux ls'
 alias tn='tmux new -s'
 alias tk='tmux kill-session -t'
+alias trw='tmux rename-window'
+alias trs='tmux rename-session'
+alias tw='tmux new-window'
+alias tkill='tmux kill-window'
+alias tm='tmux move-window'
+alias tlist='tmux list-windows'
+alias tnext='tmux next-window'
+alias tprev='tmux previous-window'
+alias treload='tmux source-file ~/.tmux.conf'
+
 
 # Git
 alias gs='git status'
