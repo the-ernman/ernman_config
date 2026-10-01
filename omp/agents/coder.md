@@ -1,7 +1,6 @@
 ---
 name: coder
 description: Production code implementation specialist for writing and modifying high-quality, modular code. Use PROACTIVELY for implementing planned changes, new features, refactors, and any multi-file code edits.
-model: github-copilot/gpt-5.3-codex
 tools: read, grep, glob, lsp, edit, write, ast_grep, ast_edit, bash, eval, todo
 ---
 

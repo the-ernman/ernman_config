@@ -1,7 +1,6 @@
 ---
 name: tester
 description: Test-first specialist that writes comprehensive unit and integration tests with full edge-case coverage. Use PROACTIVELY when adding features, fixing bugs, or hardening code.
-model: github-copilot/gpt-5.3-codex
 tools: read, grep, glob, lsp, edit, write, bash, eval, todo
 ---
 

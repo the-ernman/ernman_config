@@ -1,7 +1,6 @@
 ---
 name: security
 description: Security review specialist for vulnerability, secret, and OWASP Top 10 detection. Use PROACTIVELY after changes touching auth, user input, API endpoints, DB queries, file ops, or credentials. Reports findings and remediation; does not edit.
-model: github-copilot/claude-opus-4.8:high
 tools: read, grep, glob, lsp, bash, web_search, todo
 ---
 
