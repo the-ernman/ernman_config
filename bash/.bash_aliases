@@ -453,10 +453,74 @@ function extract() {
         *)                echo "extract: unsupported format: $1" >&2; return 1 ;;
     esac
 }
+
 function serve() {
     python3 -m http.server "${1:-8000}"
 }
+
 function bak() {
     [[ -f "$1" ]] || { echo "Usage: bak <file>" >&2; return 1; }
     cp -- "$1" "$1.$(date +%Y%m%d_%H%M%S).bak"
+}
+
+function gnb() {
+	local usage="Usage: new_branch [-r|--remote <remote>] [-s|--source <source_branch>] <branch_name>"
+	local source_branch="main"
+	local source_remote="origin"
+	local new_remote="origin"
+	local new_branch=""
+	while [[ $# -gt 0 ]]; do
+		case "$1" in
+			-r|--remote)
+				source_remote="$2"
+				shift 2
+				;;
+			-s|--source)
+				source_branch="$2"
+				shift 2
+				;;
+			-R|--new-remote)
+				new_remote="$2"
+				shift 2
+				;;
+			*)
+			    if [[ -n "$new_branch" ]]; then
+				    echo "Error: Multiple branch names provided" >&2
+					echo "$usage" >&2
+				    return 1
+			    fi
+				new_branch="$1"
+				shift
+				;;
+		esac
+	done
+	if [[ -z "$new_branch" ]]; then
+		echo "Error: Branch name not provided" >&2
+		echo "$usage" >&2
+		return 1
+	fi
+	if ! git remote -v | grep -q "$source_remote"; then
+		echo "Error: Remote '$source_remote' not found" >&2
+		return 1
+	fi
+	if ! git remote -v | grep -q "$new_remote"; then
+		echo "Error: Remote '$new_remote' not found" >&2
+		return 1
+	fi
+	git fetch -a "$source_remote" || {
+		echo "Error: Failed to fetch from remote '$source_remote'" >&2
+		return 1
+	}
+	if ! git branch -r | grep -q "$source_remote/$source_branch"; then
+		echo "Error: Source branch '$source_branch' not found on remote '$source_remote'" >&2
+		return 1
+	fi
+	git switch -c "$new_branch" "$source_remote/$source_branch" || {
+		echo "Error: Failed to create new branch '$new_branch' from '$source_remote/$source_branch'" >&2
+		return 1
+	}
+	git push -u "$new_remote" "$new_branch" || {
+		echo "Error: Failed to push new branch '$new_branch' to remote '$new_remote'" >&2
+		return 1
+	}
 }

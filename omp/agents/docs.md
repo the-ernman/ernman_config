@@ -1,7 +1,6 @@
 ---
 name: docs
 description: Documentation and technical-writing specialist for user guides, tutorials, FAQs, READMEs, and release notes. Use for documentation tasks after features are complete.
-model: github-copilot/claude-haiku-4.5
 tools: read, grep, glob, edit, write
 ---
 
